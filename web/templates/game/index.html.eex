@@ -1,0 +1,48 @@
+<h2>Listing games</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Year published</th>
+      <th>Platform</th>
+      <th>Developer</th>
+      <th>Country of origin</th>
+      <th>Release language</th>
+      <th>Real religion</th>
+      <th>Adapted religion</th>
+      <th>Fictional religion</th>
+      <th>Openly lgbtq characters</th>
+      <th>Customisable character</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for game <- @games do %>
+    <tr>
+      <td><%= game.title %></td>
+      <td><%= game.genre %></td>
+      <td><%= game.year_published %></td>
+      <td><%= game.platform %></td>
+      <td><%= game.developer %></td>
+      <td><%= game.country_of_origin %></td>
+      <td><%= game.release_language %></td>
+      <td><%= game.real_religion %></td>
+      <td><%= game.adapted_religion %></td>
+      <td><%= game.fictional_religion %></td>
+      <td><%= game.openly_lgbtq_characters %></td>
+      <td><%= game.customisable_character %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: game_path(@conn, :show, game), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: game_path(@conn, :edit, game), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: game_path(@conn, :delete, game), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New game", to: game_path(@conn, :new) %>
