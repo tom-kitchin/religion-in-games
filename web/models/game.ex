@@ -9,6 +9,7 @@ defmodule ReligionInGames.Game do
     field :developer, :string
     field :country_of_origin, :string
     field :release_language, :string
+    field :summary, :string
     field :real_religion, :boolean, default: false
     field :adapted_religion, :boolean, default: false
     field :fictional_religion, :boolean, default: false
@@ -23,7 +24,7 @@ defmodule ReligionInGames.Game do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :genre, :year_published, :platform, :developer, :country_of_origin, :release_language, :real_religion, :adapted_religion, :fictional_religion, :openly_lgbtq_characters, :customisable_character])
-    |> validate_required([:title, :genre, :year_published, :platform, :developer, :country_of_origin, :release_language, :real_religion, :adapted_religion, :fictional_religion, :openly_lgbtq_characters, :customisable_character])
+    |> cast(params, [:title, :genre, :year_published, :platform, :developer, :country_of_origin, :release_language, :summary, :real_religion, :adapted_religion, :fictional_religion, :openly_lgbtq_characters, :customisable_character])
+    |> validate_required([:title, :genre, :year_published, :platform, :developer, :country_of_origin, :release_language, :summary, :real_religion, :adapted_religion, :fictional_religion, :openly_lgbtq_characters, :customisable_character])
   end
 end

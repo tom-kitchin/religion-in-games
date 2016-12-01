@@ -2,7 +2,7 @@ defmodule ReligionInGames.GameControllerTest do
   use ReligionInGames.ConnCase
 
   alias ReligionInGames.Game
-  @valid_attrs %{adapted_religion: true, country_of_origin: "some content", customisable_character: true, developer: "some content", fictional_religion: true, genre: "some content", openly_lgbtq_characters: true, platform: "some content", real_religion: true, release_language: "some content", title: "some content", year_published: "some content"}
+  @valid_attrs %{adapted_religion: true, country_of_origin: "some content", customisable_character: true, developer: "some content", fictional_religion: true, genre: "some content", openly_lgbtq_characters: true, platform: "some content", real_religion: true, release_language: "some content", summary: "some content", title: "some content", year_published: "some content"}
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do

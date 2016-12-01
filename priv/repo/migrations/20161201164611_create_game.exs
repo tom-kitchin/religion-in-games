@@ -10,6 +10,7 @@ defmodule ReligionInGames.Repo.Migrations.CreateGame do
       add :developer, :string
       add :country_of_origin, :string
       add :release_language, :string
+      add :summary, :string
       add :real_religion, :boolean, default: false, null: false
       add :adapted_religion, :boolean, default: false, null: false
       add :fictional_religion, :boolean, default: false, null: false

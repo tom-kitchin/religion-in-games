@@ -10,6 +10,7 @@
       <th>Developer</th>
       <th>Country of origin</th>
       <th>Release language</th>
+      <th>Summary</th>
       <th>Real religion</th>
       <th>Adapted religion</th>
       <th>Fictional religion</th>
@@ -29,6 +30,7 @@
       <td><%= game.developer %></td>
       <td><%= game.country_of_origin %></td>
       <td><%= game.release_language %></td>
+      <td><%= game.summary %></td>
       <td><%= game.real_religion %></td>
       <td><%= game.adapted_religion %></td>
       <td><%= game.fictional_religion %></td>

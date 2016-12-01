@@ -12,8 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :religion_in_games, ReligionInGames.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "tom",
   database: "religion_in_games_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

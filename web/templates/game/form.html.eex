@@ -48,6 +48,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :summary, class: "control-label" %>
+    <%= textarea f, :summary, class: "form-control" %>
+    <%= error_tag f, :summary %>
+  </div>
+
+  <div class="form-group">
     <%= label f, :real_religion, class: "control-label" %>
     <%= checkbox f, :real_religion, class: "form-control" %>
     <%= error_tag f, :real_religion %>

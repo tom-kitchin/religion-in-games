@@ -38,6 +38,11 @@
   </li>
 
   <li>
+    <strong>Summary:</strong>
+    <%= @game.summary %>
+  </li>
+
+  <li>
     <strong>Real religion:</strong>
     <%= @game.real_religion %>
   </li>
