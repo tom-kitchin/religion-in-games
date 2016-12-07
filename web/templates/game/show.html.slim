@@ -1,29 +1,6 @@
-h2 Show game
+h2 = @game.title
+= render "profile_card.html", game: @game
 ul
-  li
-    strong Title:
-    = @game.title
-  li
-    strong Genre:
-    = @game.genre
-  li
-    strong Year published:
-    = @game.year_published
-  li
-    strong Platform:
-    = @game.platform
-  li
-    strong Developer:
-    = @game.developer
-  li
-    strong Country of origin:
-    = @game.country_of_origin
-  li
-    strong Release language:
-    = @game.release_language
-  li
-    strong Summary:
-    = @game.summary
   li
     strong Real religion:
     = @game.real_religion

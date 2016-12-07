@@ -3,6 +3,8 @@ defmodule ReligionInGames.GameController do
 
   alias ReligionInGames.Game
 
+  plug :put_layout, "religion.html"
+
   def index(conn, _params) do
     games = Repo.all(Game)
     render(conn, "index.html", games: games)

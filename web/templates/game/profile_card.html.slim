@@ -1,0 +1,22 @@
+.profile-card
+  ul
+    li
+      strong Genre:
+      = " #{@game.genre}"
+    li
+      strong Year published:
+      = " #{@game.year_published}"
+    li
+      strong Platform:
+      = " #{@game.platform}"
+    li
+      strong Developer:
+      = " #{@game.developer}"
+    li
+      strong Country of origin:
+      = " #{@game.country_of_origin}"
+    li
+      strong Release language:
+      = " #{@game.release_language}"
+  p.profile-card-text
+    = @game.summary
