@@ -1,0 +1,43 @@
+h2 Show game
+ul
+  li
+    strong Title:
+    = @game.title
+  li
+    strong Genre:
+    = @game.genre
+  li
+    strong Year published:
+    = @game.year_published
+  li
+    strong Platform:
+    = @game.platform
+  li
+    strong Developer:
+    = @game.developer
+  li
+    strong Country of origin:
+    = @game.country_of_origin
+  li
+    strong Release language:
+    = @game.release_language
+  li
+    strong Summary:
+    = @game.summary
+  li
+    strong Real religion:
+    = @game.real_religion
+  li
+    strong Adapted religion:
+    = @game.adapted_religion
+  li
+    strong Fictional religion:
+    = @game.fictional_religion
+  li
+    strong Openly lgbtq characters:
+    = @game.openly_lgbtq_characters
+  li
+    strong Customisable character:
+    = @game.customisable_character
+= link "Edit", to: game_path(@conn, :edit, @game)
+= link "Back", to: game_path(@conn, :index)

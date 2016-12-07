@@ -1,0 +1,58 @@
+= form_for @changeset, @action, fn f ->
+  = if @changeset.action do
+    .alert.alert-danger
+      p Oops, something went wrong! Please check the errors below.
+  .form-group
+    = label f, :title, class: "control-label"
+    = text_input f, :title, class: "form-control"
+    = error_tag f, :title
+  .form-group
+    = label f, :genre, class: "control-label"
+    = text_input f, :genre, class: "form-control"
+    = error_tag f, :genre
+  .form-group
+    = label f, :year_published, class: "control-label"
+    = text_input f, :year_published, class: "form-control"
+    = error_tag f, :year_published
+  .form-group
+    = label f, :platform, class: "control-label"
+    = text_input f, :platform, class: "form-control"
+    = error_tag f, :platform
+  .form-group
+    = label f, :developer, class: "control-label"
+    = text_input f, :developer, class: "form-control"
+    = error_tag f, :developer
+  .form-group
+    = label f, :country_of_origin, class: "control-label"
+    = text_input f, :country_of_origin, class: "form-control"
+    = error_tag f, :country_of_origin
+  .form-group
+    = label f, :release_language, class: "control-label"
+    = text_input f, :release_language, class: "form-control"
+    = error_tag f, :release_language
+  .form-group
+    = label f, :summary, class: "control-label"
+    = textarea f, :summary, class: "form-control"
+    = error_tag f, :summary
+  .form-group
+    = label f, :real_religion, class: "control-label"
+    = checkbox f, :real_religion, class: "form-control"
+    = error_tag f, :real_religion
+  .form-group
+    = label f, :adapted_religion, class: "control-label"
+    = checkbox f, :adapted_religion, class: "form-control"
+    = error_tag f, :adapted_religion
+  .form-group
+    = label f, :fictional_religion, class: "control-label"
+    = checkbox f, :fictional_religion, class: "form-control"
+    = error_tag f, :fictional_religion
+  .form-group
+    = label f, :openly_lgbtq_characters, class: "control-label"
+    = checkbox f, :openly_lgbtq_characters, class: "form-control"
+    = error_tag f, :openly_lgbtq_characters
+  .form-group
+    = label f, :customisable_character, class: "control-label"
+    = checkbox f, :customisable_character, class: "form-control"
+    = error_tag f, :customisable_character
+  .form-group
+    = submit "Submit", class: "btn btn-primary"

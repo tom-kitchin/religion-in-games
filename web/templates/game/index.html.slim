@@ -1,0 +1,39 @@
+h2 Listing games
+table.table
+  thead
+    tr
+      th Title
+      th Genre
+      th Year published
+      th Platform
+      th Developer
+      th Country of origin
+      th Release language
+      th Summary
+      th Real religion
+      th Adapted religion
+      th Fictional religion
+      th Openly lgbtq characters
+      th Customisable character
+      th
+  tbody
+    = for game <- @games do
+      tr
+        td= game.title
+        td= game.genre
+        td= game.year_published
+        td= game.platform
+        td= game.developer
+        td= game.country_of_origin
+        td= game.release_language
+        td= game.summary
+        td= game.real_religion
+        td= game.adapted_religion
+        td= game.fictional_religion
+        td= game.openly_lgbtq_characters
+        td= game.customisable_character
+        td.text-right
+          = link "Show", to: game_path(@conn, :show, game), class: "btn btn-default btn-xs"
+          = link "Edit", to: game_path(@conn, :edit, game), class: "btn btn-default btn-xs"
+          = link "Delete", to: game_path(@conn, :delete, game), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs"
+= link "New game", to: game_path(@conn, :new)
